@@ -56,7 +56,7 @@ def main(argv):
 			usage()
 			sys.exit(2)
 
-	masterprefix = 'TESTGiantCellSimulation_'
+	masterprefix = 'GiantCellSimulation_'
 
 	parameterlist = [trials, growthIterations, max_strand_nr, maxStrandLength, numCells, numRounds, repr(motif), elong, elong, bias]
 
