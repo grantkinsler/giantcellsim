@@ -42,12 +42,12 @@ def giantcellsim_motifoutput(parameterlist,masterprefix,testprefix,trials,growth
 			stdevs.append([])
 
 		for time_point in range(numRounds):
-			means[0].append(numpy.mean(motif_freq_aggregate[time_point]))
-			stdevs[0].append(numpy.std(motif_freq_aggregate[time_point]))
-			means[1].append(numpy.mean(strands_freq_aggregate[time_point]))
-			stdevs[1].append(numpy.std(strands_freq_aggregate[time_point]))
-			means[2].append(numpy.mean(cells_with_freq_aggregate[time_point]))
-			stdevs[2].append(numpy.std(cells_with_freq_aggregate[time_point]))
+			means[0].append(numpy.mean(numpy.asarray(motif_freq_aggregate[time_point])))
+			stdevs[0].append(numpy.std(numpy.asarray(motif_freq_aggregate[time_point])))
+			means[1].append(numpy.mean(numpy.asarray(strands_freq_aggregate[time_point])))
+			stdevs[1].append(numpy.std(numpy.asarray(strands_freq_aggregate[time_point])))
+			means[2].append(numpy.mean(numpy.asarray(cells_with_freq_aggregate[time_point])))
+			stdevs[2].append(numpy.std(numpy.asarray(cells_with_freq_aggregate[time_point])))
 
 		for mean_data in means:
 			writer.writerow(mean_data)
